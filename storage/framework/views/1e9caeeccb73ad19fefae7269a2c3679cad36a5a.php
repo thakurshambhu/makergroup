@@ -1,0 +1,1 @@
+<?php /**PATH C:\xampp\htdocs\Makergroup\resources\views/layouts/navbars/fixed-plugin.blade.php ENDPATH**/ ?>

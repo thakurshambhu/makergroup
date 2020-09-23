@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
+  <g id="dropdown_icon" data-name="dropdown icon" transform="translate(-756 -302)">
+    <g id="Rectangle_22" data-name="Rectangle 22" transform="translate(756 302)" fill="#fff" stroke="#252422" stroke-width="1">
+      <rect width="14" height="14" rx="2" stroke="none"/>
+      <rect x="0.5" y="0.5" width="13" height="13" rx="1.5" fill="none"/>
+    </g>
+    <path id="Path_39" data-name="Path 39" d="M4764.833,337.167l3.35,3.35,3.35-3.35" transform="translate(-4005.334 -29.667)" fill="none" stroke="#252422" stroke-linecap="round" stroke-width="1"/>
+  </g>
+</svg>

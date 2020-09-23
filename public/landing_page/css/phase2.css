@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800&display=swap');
+/* Reset CSS
+   ========================================================================== */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+margin: 0; padding: 0; border: 0; font-size: 100%; vertical-align: baseline; }
+
+body { background: #ffffff;  font-family: 'Montserrat', sans-serif; color: #252422; font-size: 16px;  line-height: 1;  overflow-x: hidden; }
+
+/* Common CSS
+   ========================================================================== */
+ol, ul { list-style: none; }
+
+a, .btn { transition: all 0.5s ease; }
+a:active, a:hover, a:focus, .btn:focus, .btn:active, .btn:hover { outline: 0; }
+a { color: #252422; text-decoration: none; }
+a:focus, a:hover { color: #575757; text-decoration: none; }
+
+b, strong { font-weight: bold; }
+small { font-size: 80%; }
+sub, sup { font-size: 72%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.4em; }
+sub { bottom: -0.25em; }
+
+img { border: 0; vertical-align: middle; }
+
+hr { box-sizing: content-box; height: 0; }
+h6{font-size: 1.2rem; line-height: 29px; }
+h1{font-size: 2.8rem; font-weight: 900;}
+h2{font-size: 2.2rem;}
+h3{font-size:22px;}
+
+*:focus { outline: 0; }
+
+svg:not(:root) { overflow: hidden; }
+
+.container { max-width: 1170px; width: 100%; }
+.wrapper{ padding-top: 107px;}
+.hide{display: none;}
+/****** Common Css ***/
+.block{ display: block;}
+.btn{text-transform: capitalize; font-weight: 600;}
+.btn-default{ background: #F1B91D; border-color: #F1B91D;   border-radius: 3px;  color: #ffffff;  font-size: 15px;}
+.btn-default:hover, .btn-default:focus ,.btn-default:not(:disabled):not(.disabled):active{ background: #252422; border-color: #252422;color: #ffffff;}
+.btn-secondary{background: #f6f5f5; font-size:12px; color: #292929; border:0;}
+.btn-border{color: #F1B91D; border:1px solid #F1B91D; background: #fff;}
+.btn-border:hover{color: #fff; background: #F1B91D;}
+.bgGray{ background: #f8f8f8; }
+.bgWhite{ background: #ffffff; }
+.text-primary{ color: #F1B91D!important; }
+.btn-md{min-width: 208px; padding: 0.6rem 1.5rem;}
+.btn-lg{}
+.btn-sm{}
+.bg-primary{background: #FF0000 !important;}
+.table-bordered td, .table-bordered th{border-color: #f5f5f5 !important;}
+.section{ padding: 3.5rem 0;}
+.badge-default{background: #FF0000; color: #fff;}
+
+.box-shadow { border-radius: 8px; box-shadow: 0px 8px 40px 0 rgba(0, 0, 0, 0.15); background: #fff; padding: 2rem 1rem; }
+
+
+.form-control{font-size: 14px; color: #AAAAA9;  border:1px solid #DDDDDD;}
+.form-control:focus{border-color: #F1B91D;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px #F1B91D;
+  }
+
+/*-------------------------------------------------------*/
+/* Main Css
+/*-------------------------------------------------------*/
+.stepHeader h3{padding: 1.3rem; font-size: 1.7rem; text-transform:capitalize; border-bottom: 1px solid #E7E7E7;}
+
+/*-------------------------------------------------------*/
+/* Objectives Css
+/*-------------------------------------------------------*/
+
+
+
+.accordion .card-header:after {
+  font-family: 'FontAwesome';  
+  content: "\f068";
+  float: right; 
+}
+.accordion .card-header.collapsed:after {
+  /* symbol for "collapsed" panels */
+  content: "\f067"; 
+}
+
+.objectiveBlock .form-control{flex-basis: 82%;}
+.objectiveBlock .accordion .form-group{padding: 1.25rem; border-bottom: 1px solid #F2F2F2; margin-bottom: 0;}
+.objectiveBlock .accordion .form-group:last-child{border-bottom: 0 !important;}
+.objectiveBlock .accordion .form-group  label{justify-content: flex-start; width: 90px;}
+.objectiveBlock .tooltip-q{padding:0; width: 15px; height: 15px; line-height: 10px; font-size: 10px; color: #fff; background: #F1B91D; border-radius: 50%;}
+.objectiveBlock .card-body{padding: 0;}
+.objectiveBlock h3{font-size: 1.2rem; font-weight: 600; text-transform: capitalize; padding: 1rem 0;}
+.objectiveBlock .card-header{background:#F1B91D;color:#fff;font-size: 18px;font-weight: 600;text-transform: capitalize;}
+.objectiveBlock .accordion .card-header.collapsed::after, .objectiveBlock .accordion .card-header::after { width: 22px; height: 22px; border-radius: 50%; line-height: 22px; text-align: center; font-size: 13px; font-weight: 500; background: #fff; color: #F1B91D;}
+.objectiveOrange{background: #F1791D !important;}
+.radius-1{border-radius: 1rem; overflow: hidden;}
+.addObjective{color: #F1B91D; margin: 1.5rem 0 0 0; display: block;}
+.divider{height: 1px; background: #F3F3F3; margin: 1.5rem 0; width: 100%;}
+.card{border:1px solid #dddddd !important;}
+
+
+
+
+
+
+
+
+/*-------------------------------------------------------*/
+/* Responsive Css
+/*-------------------------------------------------------*/
+@media (max-width: 1400px){
+
+}
+@media (max-width: 990px) {
+  
+}
+
+@media (max-width: 767px) {
+  
+
+
+
+}
+
+@media (max-width: 640px) {
+ 
+  
+}
+    
+@media (max-width: 576px) {
+
+
+}
+@media (max-width: 420px){
+
+
+}
+

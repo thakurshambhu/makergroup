@@ -1,0 +1,855 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800&display=swap');
+/* Reset CSS
+   ========================================================================== */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+margin: 0; padding: 0; border: 0; font-size: 100%; vertical-align: baseline; }
+
+body { background: #ffffff;  font-family: 'Montserrat', sans-serif; color: #252422; font-size: 16px;  line-height: 1;  overflow-x: hidden; }
+
+/* Common CSS
+   ========================================================================== */
+ol, ul { list-style: none; }
+
+a, .btn { transition: all 0.5s ease; }
+a:active, a:hover, a:focus, .btn:focus, .btn:active, .btn:hover { outline: 0; }
+a { color: #252422; text-decoration: none; }
+a:focus, a:hover { color: #575757; text-decoration: none; }
+
+b, strong { font-weight: bold; }
+small { font-size: 80%; }
+sub, sup { font-size: 72%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.4em; }
+sub { bottom: -0.25em; }
+
+img { border: 0; vertical-align: middle; }
+
+hr { box-sizing: content-box; height: 0; }
+h6{font-size: 1.2rem; line-height: 29px; }
+h1{font-size: 2.8rem; font-weight: 900;}
+h2{font-size: 2.2rem;}
+h3{font-size:1.375rem;}
+
+*:focus { outline: 0; }
+
+svg:not(:root) { overflow: hidden; }
+
+.container { max-width: 1170px; width: 100%; }
+.wrapper{}
+.hide{display: none;}
+/****** Common Css ***/
+.block{ display: block;}
+.btn{text-transform: capitalize; font-weight: 600;}
+.btn-default{ background: #F1B91D !important; border-color: #F1B91D !important;   border-radius: 3px !important;  color: #ffffff !important;  font-size: 0.9375rem !important;}
+.btn-default:hover, .btn-default:focus ,.btn-default:not(:disabled):not(.disabled):active{ background: #252422 !important; border-color: #252422 !important;color: #ffffff !important;}
+ .btn-primary:focus{ background: #007bff !important; border-color: #007bff !important;color: #ffffff !important;}
+.btn-success:active:focus {
+  color: #ffffff; 
+  background-color: #007bff; 
+
+}
+.btn-primary:hover{background-color: #000 !important;}
+.btn-secondary{background: #f6f5f5 !important; font-size:0.75rem !important; color: #292929 !important; border:0 !important;}
+.btn-border{color: #F1B91D !important; border:1px solid #F1B91D !important; background: #fff !important;}
+.btn-border:hover{color: #fff !important; background: #F1B91D !important;}
+.bgGray{ background: #f8f8f8; }
+.bgWhite{ background: #ffffff; }
+.text-primary{ color: #F1B91D!important; }
+.btn-md{min-width: 13rem; padding: 0.6rem 1.5rem;}
+.btn-lg{}
+.btn-sm{}
+.bg-primary{background: #FF0000 !important;}
+.table-bordered td, .table-bordered th{border-color: #f5f5f5 !important;}
+.section{ padding: 3.5rem 0;}
+.badge-default{background: #FF0000; color: #fff;}
+select {-webkit-appearance: none;-moz-appearance: none; text-indent: 1px;text-overflow: '';}
+.box-shadow { border-radius: 8px; box-shadow: 0px 8px 40px 0 rgba(0, 0, 0, 0.15); background: #fff; padding: 2rem 1rem; }
+
+.text-underline{ text-decoration: underline;}
+
+.form-control{font-size: 0.875rem; color: #AAAAA9;  border:1px solid #DDDDDD;}
+.auto-height{height:auto !important;}
+.form-control:focus{border-color: #F1B91D;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px #F1B91D;
+  }
+.modal-content{border-radius: 1rem;}
+label{font-size:0.875rem; font-weight: 600; text-transform: capitalize; margin-bottom: 0.9375rem;}
+/*-------------------------------------------------------*/
+/* Main Css
+/*-------------------------------------------------------*/
+
+.sidebar.hideSide{width: 0; display: none;}
+.main-panel.panel-full{width:100%; }
+.btn-icon-only{background: #000 !important;}
+
+.stepHeader{margin-bottom: 1rem; position: relative;}
+.stepHeader h3{padding: 1.3rem 0 1.3rem 0; font-size: 1.7rem; text-transform:capitalize; border-bottom: 1px solid #E7E7E7;}
+.addObjective:before{display: none !important;}
+/*-------------------------------------------------------*/
+/* Sidebar Css
+/*-------------------------------------------------------*/
+
+.no-sidebar .main-panel{width: 100% !important;}
+.no-sidebar  .sidebar, .no-sidebar .sidebar-wrapper{width: 0 !important; overflow: hidden !important;}
+/*.sidebar{display: block !important;}
+.navbar{display: block !important;}*/
+/*-------------------------------------------------------*/
+/* Objectives Css
+/*-------------------------------------------------------*/
+.hideRemoveButton{
+  display:none;
+}
+.external_rest_input{
+    width: 100%;
+    height: 150px;
+}
+.internal_rest_input{
+    width: 100%;
+    height: 150px;
+}
+
+.accordion .card-header:after {
+  /*font-family: 'FontAwesome';  */
+  font:normal normal normal 14px/1 fontawesome3;
+  content: "\f068";
+  float: right; 
+}
+.accordion .card-header.collapsed:after {
+  /* symbol for "collapsed" panels */
+  content: "\f067"; 
+}
+
+
+
+.tooltip-inner{background:none !important;}
+.tooltip-inner img{border:6px solid black;width: auto; }
+.stepContainer{padding: 0 0.9375rem 0.9375rem 0.9375rem;}
+.stepContainer .card{box-shadow: none !important; margin: 0 !important;}
+.stepContainer .perceptionBlock textarea.form-control{max-height: auto !important; min-height: 120px; line-height: 20px;}
+.objectiveBlock .form-control{flex-basis: 78%;}
+.objectiveBlock .accordion .form-group{padding: 1rem; border-bottom: 1px solid #F2F2F2; margin-bottom: 0;}
+.objectiveBlock .accordion .form-group:last-child{border-bottom: 0 !important;}
+.objectiveBlock .accordion .form-group  label{justify-content: flex-start; width: 5.125rem;}
+.objectiveBlock .tooltip-q{padding:0; width: 0.9375rem; height: 0.9375rem; line-height: 10px; font-size: 0.625rem; color: #fff; background: #F1B91D; border-radius: 50%;}
+.objectiveBlock .card-body{padding: 0 !important;}
+.objectiveBlock h3, .stepBlock h3{font-size: 1.2rem; font-weight: 600; margin: 0; text-transform: capitalize; padding: 1rem 0;}
+.objectiveBlock .card-header{background:#F1B91D !important;color:#fff;font-size: 1.125rem;padding: .75rem 1.25rem !important;font-weight: 600;text-transform: capitalize;}
+.objectiveBlock .accordion .card-header.collapsed::after, .objectiveBlock .accordion .card-header::after { width: 1.375rem; height: 1.375rem; border-radius: 50%; line-height: 22px; text-align: center; font-size: 0.8125rem; font-weight: 500; background: #fff; color: #F1B91D;}
+
+.radius-1{border-radius: 1rem; overflow: hidden;}
+.addObjective{color: #F1B91D; margin: 1.5rem 0 0 0; display: block;}
+.divider{height: 1px; background: #F3F3F3; margin: 1.5rem 0; width: 100%;}
+.card{border:1px solid #dddddd !important;}
+.objectiveBlock .OrangeBg{background: #F1791D !important;}
+.highcharts-contextbutton{display: none;}
+/*-------------------------------------------------------*/
+/* Power Css
+/*-------------------------------------------------------*/
+
+.headerPoints ul li{float: left; border:1px solid #DDDDDD; border-right: 0; padding: 0.5rem 0.4375rem; font-size: 0.588rem; text-transform: capitalize;}
+.headerPoints ul li span{font-size: 0.813rem; font-weight: 600; padding-right: 0.375rem;}
+.headerPoints ul li:first-child{border-radius: 0.375rem 0 0 0.375rem;}
+.headerPoints ul li:last-child{border-radius: 0 0.375rem 0.375rem 0; border-right:1px solid #dddddd;}
+.questions{border-radius: 1rem; border:1px solid #dddddd; margin-bottom: 2rem;}
+.questions h4, .questions h5{font-size: 0.875rem; font-weight: 600; padding: 0.938rem;}
+.questions h5{color: #fff; background: #F1B91D;}
+.questionblk{padding: 1.125rem; border-bottom:1px solid #dddddd;}
+.questions .questionblk:last-child{border-bottom: 0;}
+.questionblk p{font-size: 0.875rem;}
+.questionblk select{width: 3.75rem; height: 1.75rem; border:1px solid #dddddd; background: #F3F3F3; font-weight: 600;}
+.select{position: relative;}
+.select .icon-select{position: absolute; right:7px; top:11px; pointer-events: none;}
+.questionscore{background: #f3f3f3; padding: 1.563rem 0.938rem;}
+.questionscore span:first-child{font-size: 1rem; text-transform: capitalize; font-weight: 600}
+.questionscore span:last-child{font-size: 1.188rem; font-weight: 700;}
+.powerDscore{background: #f3f3f3;  padding: 1.563rem 0  1.563rem 0.938rem; position: relative; border-radius: 1rem;}
+.powerDscore span:first-child{font-size: 0.875rem; font-weight: 600; } .powerDscore span:last-child{font-size: 1.5rem; font-weight: 700; position: absolute; right:0; bottom:0; width: 100px; height: 100%; text-align: center; line-height: 2.6; border-radius:0 16px 16px 0;}
+.positive{background: #F9CA5F;}
+
+.scoreInfo{margin:1.875rem 0}
+.scoreInfo p{font-size: 0.813rem; margin-bottom: 0.9rem;}
+.scoreInfo p.active{padding: 0.75rem; border-radius: 0.625rem;}
+.perceptionBlock{display: table;  vertical-align: middle;  border:1px solid #EAEAEA; border-radius:6px; margin-bottom: 2rem;width: 100%;}
+.perceptionBlock .box{display: table-cell; vertical-align: middle;}
+.perceptionBlock .box label{font-size: 0.8125rem; font-weight: 400;}
+/*.perceptionBlock .box:nth-child(2){width: 100px; margin: 0 0.625rem;}*/
+.perceptionBlock .box:first-child, .perceptionBlock .box:last-child{padding: 0.625rem; vertical-align: bottom;width: 43%;}
+
+
+.perceptionBlock .box h6{font-size: 0.875rem; text-transform: capitalize; color: #fff;}
+.enhance{background: #68a2ff;
+  background: -moz-linear-gradient(top,  #68a2ff 0%, #7ed6ff 100%);
+  background: -webkit-linear-gradient(top,  #68a2ff 0%,#7ed6ff 100%);
+  background: linear-gradient(to bottom,  #68a2ff 0%,#7ed6ff 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#68a2ff', endColorstr='#7ed6ff',GradientType=0 );
+  }
+  .change{
+    background: #8e61f6;
+background: -moz-linear-gradient(top,  #8e61f6 0%, #fe82db 100%);
+background: -webkit-linear-gradient(top,  #8e61f6 0%,#fe82db 100%);
+background: linear-gradient(to bottom,  #8e61f6 0%,#fe82db 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8e61f6', endColorstr='#fe82db',GradientType=0 );
+
+  }
+  .downgrade{
+    background: #ff4b1f;
+background: -moz-linear-gradient(top,  #ff4b1f 0%, #ff9068 100%);
+background: -webkit-linear-gradient(top,  #ff4b1f 0%,#ff9068 100%);
+background: linear-gradient(to bottom,  #ff4b1f 0%,#ff9068 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff4b1f', endColorstr='#ff9068',GradientType=0 );
+
+  }
+
+  .explot{
+    background: #ff1100;
+background: -moz-linear-gradient(top,  #ff1100 0%, #fb6732 100%);
+background: -webkit-linear-gradient(top,  #ff1100 0%,#fb6732 100%);
+background: linear-gradient(to bottom,  #ff1100 0%,#fb6732 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff1100', endColorstr='#fb6732',GradientType=0 );
+
+  }
+ .perceptionBlock .iconBlock{text-align: center;}
+ .perceptionBlock .box:nth-child(2) {
+    width: 100px;
+
+}
+.min-w-600{min-width:600px;}
+.btn-check{color:#fff !important;}
+
+/*-------------------------------------------------------*/
+/* Variables Css
+/*-------------------------------------------------------*/
+.card{margin: 0.9375rem 0 !important;}
+.stepTable .thead-orange{ background: #F1B91D;}
+.stepTable .thead-orange th{color: #fff; font-size: 1rem; font-weight: 600; border-top:0 !important; border-left:0 !important;}
+.stepTable .thead-light th{text-transform: capitalize; font-size: 0.938rem; color: #252422; background-color: #EAEAEA;}
+.stepTable .table-bordered td, .stepTable .table-bordered th{border:1px solid #dddddd !important; vertical-align: middle; }
+.stepTable .thead-light span.subText{font-size: 0.563rem; color: #AAAAA9; display: block;}
+.stepTable tbody td{padding: 0 !important; font-size: 0.75rem; color: #252422; vertical-align: middle; position: relative;}
+.stepTable .table-variables tbody td:first-child{padding: 0 0 0 1rem !important; font-weight: 600;}
+.stepTable tbody td .form-control{padding: 0; margin: 0; height: auto; color: #252422; background: transparent; border:0; min-height: 2.5rem; padding-left: 0.75rem;}
+.stepTable tbody td .form-control::-webkit-input-placeholder { /* Edge */
+  color: #252422;}
+
+.stepTable tbody td .form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #252422;}
+.stepTable tbody td .form-control::placeholder { color: #252422;}
+
+select.form-control:not([size]):not([multiple]){height: auto; line-height:2.5rem; padding: 0;}
+.stepTable .select{position: relative;} 
+.stepTable .select .select_icon{position: absolute; right: 10px; top:12px; pointer-events:none;}
+.table-variables tbody td:nth-child(3){width: 6.875rem;}
+.table-variables tbody td:nth-child(4), .table-variables tbody td:nth-child(5), .table-variables tbody td:nth-child(6), .table-variables tbody td:nth-child(7){
+    width: 5.313rem;
+}
+.stepTable .thead-orange th, .stepTable table{border-top:0 !important; text-transform: capitalize;}
+.stepTable .thead-orange th:first-child{border-left: 0!important;}
+.stepTable .thead-orange th:last-child{border-right: 0!important;}
+.stepTable table.table {border-radius: 1rem 1rem 0 0;border:0;}
+.table-variables tbody td:nth-child(2){width: 12.938rem;}
+.givesucess{background: #1EBE00;}
+.givedefault, .takedefault{background: #dddddd;}
+.takedanger{background: #FF2D2D;}
+.stepsNavigation{margin-bottom: 1rem; padding: 0.9375rem; flex-wrap: unset; max-width: 100%; overflow: auto;}
+.stepsNavigation a{min-width: 7.5rem; text-transform: capitalize; padding: 1rem; text-align: center; margin-right: 0.625rem; border-radius: 10px !important; background: #fff; font-size: 0.9375rem; font-weight: 600; color: #252422; -webkit-box-shadow: 3px 3px 23px -7px rgba(0,0,0,0.5);
+  -moz-box-shadow: 3px 3px 23px -7px rgba(0,0,0,0.5);
+  box-shadow: 3px 3px 23px -7px rgba(0,0,0,0.5);}
+.stepsNavigation a.active{background: #F1B91D !important; color: #fff !important;}
+
+.PowerstateInfo{padding: 0.9375rem; border:1px solid #DDDDDD; border-radius: 16px;}
+.PowerstateInfo p{font-size: 0.875rem; line-height: 24px; margin-bottom: 0.9375rem;}
+.PowerstateInfo ul{margin-left: 0.9375rem;}
+.PowerstateInfo ul li{list-style: disc;}
+
+/*-------------------------------------------------------*/
+/* Communcation Css
+/*-------------------------------------------------------*/
+
+.table-communication tbody tr td.name .btn{position: absolute; right: 9px; top:11px; height: 1.125rem; width: 1.125rem; padding: 0; font-size: 0.75rem !important; line-height: 16px;}
+.stepTable .addButton, .removeButton{background: #fff; border:0; height: 100%;}
+.stepTable .removeButton{color: #FF2D2D;}
+.table-communication .key-decision .custom-control{position: absolute; right:2px; top:8px;}
+.custom-checkbox .custom-control-label::before{border-color:#252422; }
+.custom-control-input:checked ~ .custom-control-label::before{ color:#252422; border-color: #252422; background-color: #F1B91D; background-repeat: no-repeat; background-position: 4px;}
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::after{background-image:none; background-image:url(../images/check.svg) !important;}
+.influenced button{background: none; border:0; width: 100%; text-align: left;}
+.influenced .dropdown .dropdown-menu{min-width: 100%; background: #F3F3F3; -webkit-box-shadow: 0px 0px 14px -4px rgba(0,0,0,0.57);
+  -moz-box-shadow: 0px 0px 14px -4px rgba(0,0,0,0.57);
+  box-shadow: 0px 0px 14px -4px rgba(0,0,0,0.57); border-radius: 0; top:13px;}
+.influenced .dropdown .dropdown-menu .dropdown-item{ font-size: 0.6875rem; text-transform: capitalize; padding: 0.625rem; border-bottom: 1px solid #EAEAEA; }
+table.table-communication tbody tr td.name{width: 10rem;}
+table.table-communication td.title{width: 7.5rem;}
+table.table-communication td.url{width: 15.625rem;}
+table.table-communication  .personality, table.table-communication  .key-decision{width: 9.375rem;}
+table.table-communication .relation{width: 11.25rem;}
+table.table-communication .decision-th{position: relative;}
+table.table-communication .decision-th a{margin-left: 0.9375rem; color: #F1B91D;}
+table.table-communication tbody td:first-child, table.table-communication tbody td:last-child{width: 1.125rem; text-align: center;}
+.influenced .dropdown-toggle::after{display: none;}
+.influenced .dropdown-toggle{padding-left: 0.625rem;}
+.profileGraph .userInfo .image{width: 3.125rem; height: 3.125rem; border-radius: 50%; overflow: hidden;}
+.profileGraph .userInfo h5{font-size: 1rem; font-weight:600; text-transform: capitalize;}
+.profileGraph  .userInfo h6{color: #AAAAA9; font-size: 0.8125rem; text-transform: capitalize;}
+.profileGraph  h4.type{font-size: 0.8125rem; text-transform: capitalize;}
+.profileGraph  h4.type span{font-weight: 600; color: #F1B91D !important;}
+.chart-wrapper {width: 100%;height: 100%;background-color: #fff;position: absolute;}
+path {stroke: #0d0d0d;  /* stroke-width: 5px; */ cursor: pointer;transition: fill 250ms;}
+path:hover { /* stroke-width: 10px; */fill: #fff;}
+text {font-size: .8em;text-transform: uppercase; letter-spacing: .5px;}
+polyline { fill: none;stroke: #000; stroke-width: 2px; stroke-dasharray: 5px;}
+.profileGraph .modal-body p{font-size: 0.8125rem; line-height: 24px;}
+.messaging thead th:first-child, .messaging thead th:last-child, .messaging tbody td:first-child,  .messaging tbody td:last-child{width: 1.125rem; text-align: center;}
+.messaging tbody td:nth-child(4), .messaging tbody td:nth-child(6){width:10.375rem;}
+.messaging tbody td:nth-child(5){width:9.625rem;}
+.messaging tbody td:nth-child(2){min-width: 15.75rem;}
+.messaging tbody td:nth-child(3){min-width: 15.75rem;}
+.messaging tbody td{height: 3.75rem;}
+.messaging tbody td .form-control{height: 100%;}
+.messaging h4{font-size: 1rem; text-transform:capitalize; margin-bottom: 0.75rem; font-weight: 600;}
+/*-------------------------------------------------------*/
+/* TimeLine Graph Css
+/*-------------------------------------------------------*/ 
+ 
+
+.timeline-container{max-width: 100%;overflow: auto;}
+.tbl-min-width{min-width: 500px;}
+
+.timeline{padding: 2.5rem; position: relative; min-width: 100%; overflow: auto;}
+.timeline:before, .timeline:after{content: ""; position: absolute;   width: 2.375rem;
+  height: 2.1875rem; left:2%; z-index: 9; top:42%;  background-image: url(../images/star-yellow.svg); background-repeat: no-repeat;}
+  .timeline:after{left: auto; right: 2%;}
+.timeline ul{display:flex; position: relative; min-width: 51.5rem;}
+.timeline ul:before {
+  content: "";
+  height: 2px;
+  width: 100%;
+  background: red;
+  position: absolute;
+  top: 50%;
+  z-index: 0;
+}
+.timeline ul li{display: flex;     width: 0.625rem; flex-direction: column; margin-left: 2%; text-align: center; position: relative; height: 8.75rem;}
+.timeline ul li span.date{font-size: 0.625rem; font-weight: 600; text-transform: capitalize;     position: absolute;
+  width: 2.125rem;
+  left: 50%;
+  bottom: 83px;
+  transform: translate(-50%, 0px);}
+.timeline ul li span.vr-type{background: #252422; color: #fff; font-size: 0.625rem; min-width: 5rem; left:-35px; text-transform: capitalize; font-weight: 600; position: absolute;
+  bottom: -30px; padding: 4px 6px; border-radius: 4px;}
+.timeline ul li .dot{position: absolute;height: 1rem;width: 1rem;background:#252422;border-radius: 50%;top: 50%;left: 50%;transform: translate(-50%, -50%);}
+.timeline ul li:after {
+  position: absolute;
+  height: 4rem;
+  width: 0.0625rem;
+  background: #252422;
+  content: "";
+  left: 50%;
+  bottom:-1px;
+}
+
+.timeline ul li:before {
+  position: absolute;
+  height: 7px;
+  width: 7px;
+  background: #252422;
+  border-radius: 50%;
+  content: "";
+    left: 50%;
+    transform: translate(-50%, 0);
+  bottom: -3px;
+}
+
+.timeline ul li:nth-child(odd):after {
+
+  left: 50%;
+  bottom: 4.6875rem;
+}
+
+.timeline ul li:nth-child(odd):before {
+
+  bottom: auto;
+
+}
+.timeline ul li:nth-child(odd) span.vr-type{   
+  bottom: auto;
+  top: -25px;}
+  .timeline ul li:nth-child(odd) span.date{bottom: 45px; }
+
+  .timeline .phonecall{background: #C96BFF !important;}
+  .timeline .f2f{background: #F1B91D !important;}
+  .timeline .email{background: #50B3FF !important;}
+
+
+/*-------------------------------------------------------*/
+/* Time Css
+/*-------------------------------------------------------*/
+
+.table-time .f2f{background: #F97B3A;}
+.table-time  .email-td{background: #06A0E4;}
+.table-time .phone-call{background: #FF97BD;}
+.table-time tbody td:first-child, .table-time tbody td:last-child{width: 1.125rem;}
+.table-time .tableContainer{position: relative;}
+
+/*-------------------------------------------------------*/
+/* Risk Css
+/*-------------------------------------------------------*/
+
+.table-risk .highImpact{ background: #F97B3A !important;}
+.table-risk  .lowImpact{background: #06A0E4 !important;}
+.table-risk tbody td:first-child, .table-negotiation thead th:first-child, .table-negotiation tbody td:first-child{padding-left: 1.5625rem !important;}
+.table-risk .thead-orange tr th:first-child{padding-left: 27px;}
+.table-risk tbody td:first-child{padding-left: 15px !important;}
+.table-risk table{font-weight: 600;}
+.table-risk .tableContainer, .table-negotiation .tableContainer{position: relative;}
+.table-risk button.addButton, .table-risk button.removeButton, .table-negotiation button.addButton, .table-negotiation button.removeButton{position: absolute; left:0; bottom:1px; width: 1.125rem; height: 7.625rem; z-index: 1; padding: 0; border: 1px solid #dddddd;}
+.table-risk button.removeButton, .table-negotiation button.removeButton{right:0; left: auto; border-left:1px solid #dddddd;}
+.table-risk button.addButton{top:0; bottom: auto; height: 48px; color:#005cbf;background: #F1B91D;}
+.table-risk .thead-light th{padding:0; font-weight: 600;}
+.table-risk .thead-light th .form-control{ border:0; font-weight: 600;}
+.table-risk .thead-light th select.form-control{color: #252422;}
+.table-risk .thead-light th:first-child{padding: 12px 21px;}
+.table-risk .thead-light th:last-child{width: 9.625rem; padding-left: 0.9375rem;}
+
+.table-negotiation button.removeButton, .table-negotiation button.addButton{height: 100%;}
+.table-negotiation button.addButton{color:#005cbf;}
+.allSteps{padding-left:1rem;}
+.stepHeader .viewSummary{position: absolute; right: 15px; top:15px; padding: 0.5rem 0.9375rem; border: 1px solid#ddd; font-size: 0.875rem; font-weight: 600;}
+.allSteps .nav-tabs, .allSteps .nav-tabs .nav-link{border:0; margin-bottom: 1rem;}
+.table-execute .offer-td{position: relative;}
+.table-execute .offer-td .addButton, .table-execute .offer-td .removeButton{position: absolute; left:0; top:1px; background: transparent;}
+.table-execute .offer-td .removeButton{ right:1px; left: auto; }
+.table-execute-next table tbody td:first-child{width: 9.375rem;}
+.table-execute-next table tbody td:last-child{width: 8.125rem;}
+.table-execute .table tbody td{min-width: 10.3125rem;}
+.table-workflow td a{text-decoration: none !important;}
+.stepHeader a{text-decoration: none !important}
+
+/*-------------------------------------------------------*/
+/* Summary Graph Css
+/*-------------------------------------------------------*/
+
+.powerstate .powerDscore span:first-child{font-size: 0.6875rem;}
+.powerstate .powerDscore span:last-child{font-size:1rem; width: 3.125rem; line-height: 3.5}
+.powerstate .powerDscore{padding: 1rem 0 1rem 0.938rem;}
+.powerstate .scoreInfo{margin: 1rem 0;}
+#summaryDialog .modal-dialog{max-width:84.375rem;}
+#summaryDialog .modal-content{border:0;}
+.summaryBlock{margin-bottom: 0.9375rem; border:1px solid #dddddd;}
+.summaryBlock .blockHead{font-size: 0.75rem; font-weight: 600; text-transform: uppercase; color: #fff; padding:0.625rem; background: #F1B91D;}
+.summaryBlock .blockHead span{text-transform: capitalize; }
+.summaryBlock p, .summaryBlock  table td{font-size: 0.6875rem; line-height: 1.30}
+.summaryBlock  td h5{font-size: 0.75rem; text-transform: capitalize; font-weight: 600; margin-bottom: 0.6875rem;}
+.summaryBlock thead th{background: #DDDDDD; font-size: 0.6875rem; font-weight: 500; text-transform: capitalize;}
+.summaryBlock tbody td{font-size: 0.6875rem; padding: 0.3125rem;}
+.summaryBlock tbody td .variable{display: flex; justify-content: space-between; word-break: break-all;}
+.summaryBlock tbody td .variable .type{margin-left:4px; text-transform: uppercase; font-weight: 600; color: #fff; padding: 2px 4px; height: 1.3125rem;}
+.summaryBlock tbody td .variable .type.take, .summaryBlock tbody td .variable .type.take-give{background: #FF2D2D;}
+.summaryBlock tbody td .variable .type.give{background: #1EBE00;}
+.summaryBlock .table{margin-bottom: 0;}
+.keyObjective .table{margin-bottom: 0;}
+.keyMessaging tbody tr td:first-child{padding-left: 0.9375rem;}
+.keyMessaging tbody tr td p{position: relative;}
+.keyMessaging tbody tr td p::before{content: ""; position: absolute; left:-10px; top:10px; height: 0.3125rem; width: 0.3125rem; background: #252422; border-radius: 50%;}
+.summaryBlock.relationtree{height: 98%;}
+img.arrow-inf{position: absolute; width: 13px;height: 13px;z-index: 1;}
+img.arrow-up{top: 96%;right: 39.4%; }
+img.arrow-down{left:39.5%; top: auto;bottom: 94%;transform: rotate(180deg);}
+img.arrow-mid{left:39.5%; top: auto;bottom: 95%;}
+img.arrow-mid{ z-index: 1; left:39.5%; top: auto;bottom: 95%;}
+img.influence-back {bottom: 105%;left: 39.6%;}
+
+
+/*-------------------------------------------------------*/
+/* Binary Tree Css
+/*-------------------------------------------------------*/
+/*Now the CSS*/
+* {margin: 0; padding: 0;}
+
+.tree ul {
+  padding-top: 1.25rem; position: relative;
+  
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+}
+
+.tree li {
+  float: left; text-align: center;
+  list-style-type: none;
+  position: relative;
+  padding: 1.25rem 0.3125rem 0 0.3125rem;
+  
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  min-width: 6rem;
+}
+
+/*We will use ::before and ::after to draw the connectors*/
+
+.tree li::before, .tree li::after{
+  content: '';
+  position: absolute; top: 0; right: 50%;
+  border-top: 1px solid #ccc;
+  width: 50%; height: 1.25rem;
+}
+.tree li::after{
+  right: auto; left: 50%;
+  border-left: 1px solid #ccc;
+}
+
+/*We need to remove left-right connectors from elements without 
+any siblings*/
+.tree li:only-child::after, .tree li:only-child::before {
+  display: none;
+}
+
+/*Remove space from the top of single children*/
+.tree li:only-child{ padding-top: 0;}
+
+/*Remove left connector from first child and 
+right connector from last child*/
+.tree li:first-child::before, .tree li:last-child::after{
+  border: 0 none;
+}
+/*Adding back the vertical connector to the last nodes*/
+.tree li:last-child::before{
+  border-right: 1px solid #ccc;
+  border-radius: 0 5px 0 0;
+  -webkit-border-radius: 0 5px 0 0;
+  -moz-border-radius: 0 5px 0 0;
+}
+.tree li:first-child::after{
+  border-radius: 5px 0 0 0;
+  -webkit-border-radius: 5px 0 0 0;
+  -moz-border-radius: 5px 0 0 0;
+}
+
+/*Time to add downward connectors from parents*/
+.tree ul ul::before{
+  content: '';
+  position: absolute; top: 0; left: 50%;
+  border-left: 1px solid #ccc;
+  width: 0; height: 1.25rem;
+}
+
+.tree li a{ 
+  border: 1px solid transparent;
+
+  text-decoration: none;
+  color: #fff;
+  font-family: arial, verdana, tahoma;
+  font-size: 0.6875rem;
+  display: inline-block;
+  
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  width: 3.875rem;
+  height: 3.875rem;
+  border-radius: 50%;
+  line-height: 3.875rem;
+  background: #252422;
+  position: relative;
+  text-transform: capitalize;
+
+}
+.tree li a.active{border:1px solid #F1B91D; position: relative;}
+.tree li a.active:before{content:""; position: absolute; top:10px; left:50%; transform: translate(-50%, 0); height: 0.625rem; width: 0.625rem; background-image: url(../images/star-yellow.svg); background-repeat: no-repeat; background-position: center; background-size: contain;}
+.treeContainer{max-width: 100%; overflow: auto; overflow-y: hidden; display: flex; justify-content: center; padding-bottom: 6.25rem;}
+.tree{padding-top: 3rem;}
+/*.tree li a .nameInfo{width: 4.375rem; height: 2.25rem; display: inline-block; position: absolute;right: -3.625rem; top: -40px; z-index: 1;}
+*/.tree li a .nameInfo{width: 4.375rem;
+    height: 2.25rem;
+    display: inline-block;
+    position: absolute;
+    right: -74px;
+    top: -10px;
+    z-index: 1;}
+.tree li a .nameInfo table{width: 100%; -webkit-box-shadow: 1px -1px 12px -2px rgba(0,0,0,0.23);
+  -moz-box-shadow: 1px -1px 12px -2px rgba(0,0,0,0.23);
+  box-shadow: 1px -1px 12px -2px rgba(0,0,0,0.23); background: #fff;}
+.tree li a .nameInfo table tr td{ line-height: 0;}
+.tree li a .nameInfo table tr td:first-child{background: #EAEAEA; padding: 0.1875rem 0.375rem;}
+.tree li a .nameInfo table tr td:first-child img{width: 0.75rem;}
+.tree li a .nameInfo table tr td:last-child{    padding: 8px;
+    text-align: left !important;
+    font-size: 11px;
+    color: #252422;
+    font-weight: 700;
+    text-transform: capitalize;} 
+.modal-content
+/*Time for some hover effects*/
+/*We will apply the hover effect the the lineage of the element also*/
+.tree li a:hover, .tree li a:hover+ul li a {
+  background: #F1B91D; color: #000; border: 1px solid rgb(119, 90, 10);
+}
+/*Connector styles on hover*/
+.tree li a:hover+ul li::after, 
+.tree li a:hover+ul li::before, 
+.tree li a:hover+ul::before, 
+.tree li a:hover+ul ul::before{
+  border-color:  #94a0b4;
+}
+.timeLineBlock{border:0;}
+ 
+ .userEmail{position: relative; padding-right: 2rem; margin-bottom: 2rem;}
+ .userEmail .addButton{position: absolute; right: 0; top:1.9rem;  background: none; border:0; height: 1.125rem;}
+ .userEmail .removeButton{position: absolute; right: 0; bottom:0; height: 1.125rem; color: #FF2D2D;}
+ .userEmail label{font-size:0.75rem;}
+ .userEmail .form-control{padding:1.25rem;border-bottom-right-radius:0;  border-bottom-left-radius:0;}
+.workRights { border-top:1px solid #ddd; padding: 8px 10px 2px 10px; border: 1px solid #ddd; width: 100%; border-top:0;}
+.workRights span{font-size: 0.875rem; color: #AAAAA9; margin-top: 0.3125rem;}
+.workRights .custom-checkbox{margin-left: 0.625rem; line-height: 2;}
+.table-workflow tbody tr td{padding: 1rem !important; }
+.table-workflow tbody tr td:first-child{width: 31.25rem;}
+.table-workflow .innerTable tbody tr td:first-child{width: 31.1875rem;}
+.table-workflow tbody tr td:nth-child(2){width: 18.75rem;}
+.table-workflow tbody tr td:last-child{padding: 0 !important; width: 8.125rem;}
+.table-workflow tbody tr td div{height:2.5rem;}
+.table-workflow .actions a{font-size: 1.125rem; color: #252422; width: 50%; text-align: center; line-height: 40px;}
+.table-workflow .actions .trash{background: #FF2D2D; color: #fff;}
+.table-workflow .inporgress{color: #1EBE00; font-weight: 600;}
+.table-workflow .innerTable{margin-bottom: 0 !important;}
+.innerTable .thead-light th, .table-workflow .innerTable td{ background-color:#f2f2f2; border:0 !important; border-right: 1px solid #dddddd !important; position: static;}
+.innerTable .thead-light th{font-size: 0.875rem;}
+
+.innerTable td{font-size: 0.75rem;}
+.table-workflow .innerTable td:last-child{width: 2.5rem; text-align: center; border: 1px solid #dddddd !important;}
+.table-workflow .innerTable td:last-child a{color: #FF2D2D;}
+.loader-gif{position: fixed;background: #ffff;width: 100%;height: 100%;text-align: center;z-index: 99;opacity: 0.91;display:none;}
+.loader-gif img{position: absolute; left:50%; top:50%; transform: translate(-50%, -50%); width: 120px;}
+/*-------------------------------------------------------*/
+/* Responsive Css
+/*-------------------------------------------------------*/
+@media (max-width: 1400px){
+
+}
+@media (max-width: 1199px) {
+  .powerStep{flex-direction: column; margin-bottom: 10px; align-items: flex-start !important;}
+  .stepsNavigation a{min-width: auto; font-size: 0.75rem;}
+}
+@media (max-width: 990px) {
+  .perceptionBlock{display: block;}
+  .perceptionBlock .box{width: 100% !important; display: block !important; margin: 0;}
+  .perceptionBlock .box:nth-child(2){padding: 0.625rem 0; margin: 0 !important;}
+  .headerPoints ul li{font-size: 0.538rem; }
+  
+  
+}
+
+@media (max-width: 767px) {
+  .powerDscore span:first-child{font-size: 0.675rem;}
+  .powerDscore span:last-child{width: 3.75rem;}
+  .actionButtons .btn{display: block; width: 100%; margin-bottom: 0.625rem;}
+  .headerPoints ul li span{font-size: 0.613rem; padding-right: 0.25rem;}
+  .headerPoints ul li{padding: 0.5rem 0.125rem;}
+  .questionblk p{font-size: 0.675rem;}
+  .questions h4, .questions h5{font-size: 0.775rem;}
+  .stepTable .table-responsive-sm table{min-width: 43.75rem;}
+  .timeline::before, .timeline::after{display: none;}
+  .timeline{padding: 2.5rem 0;min-width: 51.5rem;padding-top: 5rem;}
+  span.start_date{left: 0 !important;top: -43% !important;
+
+}
+
+}
+
+@media (max-width: 640px) {
+ 
+  .treeContainer{justify-content: flex-start;}
+  .objectiveBlock .form-control{flex-basis: 96%}
+/*  a.remove_objective {bottom: -64px !important;}*/
+}
+    
+@media (max-width: 576px) {
+  .powerDscore span:last-child{width: 1.875rem;}
+
+}
+@media (max-width: 420px){
+
+
+}
+
+.card-signup .input-group{
+  margin-bottom: 20px
+}
+
+.card-signup input:focus{
+  outline: none!important;
+  box-shadow: none!important;
+  border-color:#9a9a9a;
+}
+
+.card-signup .form-group{
+  text-align: left;
+  margin-bottom: 10px
+}
+.card-signup .group-icon{
+  position: absolute;
+  left:9px;
+  top:10px;
+}
+.card-signup .group-icon .nc-icon{
+  color: #66615b;
+  opacity: 0.5
+}
+.card-signup .form-group .form-control{
+  padding-left: 34px
+}
+.card-signup label.error{
+  font-size: 10px;
+  margin-bottom: 0;
+  margin-top: 5px;
+  font-weight: 400
+}
+.full-page > .content{
+  padding-bottom: 21vh
+}
+.tooltip{
+  width:500px!important;
+}
+a.btn.addOfferRow {
+    color: #005cbf;
+}
+a.addYourMoreOffer{
+  color: #005cbf !important;
+}
+a.btn.addTheirOfferRow{
+  color: #005cbf;
+}
+a.addTheirMoreOffer{
+  color: #005cbf !important;
+}
+a.btn.removeOfferRow {
+  color:#FF2D2D;
+}
+a.btn.removeTheirOfferRow {
+  color:#FF2D2D;
+}
+
+a.removeYourMoreOffer {
+    color: #FF2D2D !important;
+}
+
+a.removeTheirMoreOffer {
+    color: #FF2D2D !important;
+}
+
+a.btn.addStepsRow {
+  color:#005cbf;
+}
+a.btn.removeStepsRow {
+  color: #FF2D2D !important;
+}
+
+.stats a{
+    text-decoration: none !important;
+}
+.tooltip-inner img{
+  width:auto!important;
+}
+
+.tooltip-inner {
+ text-align: right!important;
+    max-width: none!important;
+    width: auto!important;
+    padding: 0px!important;
+}
+
+a.remove_objective  {
+    background: #fff;
+    border: 0;
+    height: 20px;
+    color: #FF2D2D !important;
+    position: absolute;
+    bottom: 10px;
+    right: 4px;
+    bottom: 38px;
+    /* font-size: 18px; */
+    width: 20px;
+}
+
+a.remove_objective button {background: none;color: red;border:0;}
+span.end_date, span.start_date {
+   
+
+  
+      position: absolute;
+    right: 0;
+    top: 43%;
+    /* transform: translate(0, -79%); */
+    background: #fff;
+    color: #000;
+    border: 2px solid #000;
+    padding: 5px;
+    border-radius: 5px;
+    width: 85px;
+    height: 32px;
+    border-radius: 5px;
+    line-height: 18px;
+    font-size: 13px;
+    text-align: center;
+
+  }
+#timeGraph .modal-dialog{max-width: 1233px !important;}
+span.start_date {
+right: auto;
+    left: 0;
+
+}
+.timeline ul {
+    display: flex;
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.tree ul li.first ul li ul li:last-child ul:before{border:0;}
+.card-category{text-align: center !important}
+
+
+  .classOne .fas{display: none!important;}
+  .textareaClass{min-height: 118px;}
+.pdfIcons{width: 40px; padding-left: 0!important;  padding-right: 0!important;}
+.pdfIcons a, .pdfIcons button{display: inline-block; width: 40px;}
+
+.negotiate_count#negotiation_1{padding-left: 30px;}
+.negotiate_count{padding-right: 30px;}
+.table-negotiation button.removeButton, .table-negotiation button.addButton, .table-risk button.addButton{width: 30px;}
+.table-risk .thead-orange tr th:first-child{padding-left: 45px;}
+
+.positionedicons{position: relative; padding-left: 40px;}
+.positionedicons > a{position: absolute; left: 9px;}
+
+.addYourMoreOffer, .removeYourMoreOffer,
+.addTheirMoreOffer, .removeTheirMoreOffer{margin: 0 10px;}
+.graph-survey h5{display: none !important;}
+/*.highcharts-axis-labels span div{position: relative !important; }
+.highcharts-axis-labels span div h5 {    display:block;position: absolute;
+    transform: rotate(45deg);}*/
+
+/*.feedbackWidget{padding:20px;}
+.feedbackWidget h4{font-size:1.25rem; margin-bottom: 20px;}
+.allFeedbacks{padding-left: 30px;}
+.allFeedbacks h5{font-size: 16px; margin-bottom: 10px;}
+.feedbackpoints{list-style: disc; margin: 0 0 20px 20px;}
+.feedbackpoints li + li{margin-top:10px;}*/
+
+
+/*.testDivPDF *{border:1px red solid;}*/
+/*
+.tableDiv{display: table; width: 100%; table-layout: fixed;}
+.tablecellDiv{display:table-cell; width: 50%; padding:0 15px;}*/
+
+/*#container1 > div, #container1 > div svg{width:100%!important; height: 550px!important;}*/
+
+
+  /*#accordion_1, #their_accordion_1{page-break-before : always; page-break-after : always}*/
+
+.objectiveBlock .accordion .form-group{padding: 0.5rem 1rem;}
+.stepContainer textarea.form-control,
+.stepContainer .stepTable tbody td textarea.form-control{font-size: 14px; line-height: 1.3; padding: 5px; height: 80px;}
